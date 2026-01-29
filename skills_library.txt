@@ -1,0 +1,323 @@
+python
+java
+javascript
+c++
+c#
+sql
+r
+mcom
+ca
+cpa
+ifrs 15
+ind as 115
+revenue recognition
+erp
+zuora
+salesforce revenue cloud
+excel
+tableau
+power bi
+quickbooks
+sap
+tally erp
+machine learning
+deep learning
+pytorch
+tensorflow
+scikit-learn
+feature engineering
+statistical modeling
+data cleaning
+data visualization
+cloud
+aws
+azure
+gcp
+communication
+analytical skills
+attention to detail
+project management
+pmp
+innovation
+computer vision
+classification
+deep learning
+a/b testing
+mlops
+docker
+kubernetes
+git
+github
+flask
+html
+css
+react
+node
+agile
+scrum
+kanban
+jira
+confluence
+rest api
+graphql
+microservices
+devops
+ci/cd
+jenkins
+gitlab ci
+github actions
+azure devops
+aws lambda
+azure functions
+google cloud functions
+nosql
+mongodb
+postgresql
+mysql
+cassandra
+redis
+elasticsearch
+hadoop
+spark
+kafka
+flink
+data warehousing
+etl
+business intelligence
+data modeling
+data governance
+data security
+cybersecurity
+information security
+risk management
+compliance
+gdpr
+hipaa
+iso 27001
+penetration testing
+vulnerability management
+incident response
+security audits
+forensics
+threat intelligence
+siem
+firewall
+endpoint security
+iam
+cryptography
+network security
+application security
+cloud security
+product management
+product ownership
+product strategy
+market research
+user experience
+ux design
+ui design
+figma
+sketch
+adobe xd
+photoshop
+illustrator
+indesign
+premiere pro
+after effects
+audition
+creative suite
+content creation
+copywriting
+seo
+sem
+social media marketing
+email marketing
+content marketing
+inbound marketing
+outbound marketing
+sales strategy
+crm
+salesforce
+hubspot
+zendesk
+customer service
+customer support
+technical support
+troubleshooting
+problem solving
+critical thinking
+decision making
+leadership
+team management
+mentorship
+coaching
+public speaking
+presentation skills
+negotiation
+stakeholder management
+change management
+risk assessment
+budgeting
+financial analysis
+forecasting
+accounting
+auditing
+taxation
+financial reporting
+hr management
+talent acquisition
+recruitment
+onboarding
+employee relations
+performance management
+compensation & benefits
+payroll
+hr analytics
+ats
+workday
+successfactors
+oracle hcm
+sap successfactors
+business analysis
+requirements gathering
+process improvement
+lean six sigma
+quality assurance
+qa testing
+manual testing
+automation testing
+selenium
+cypress
+jmeter
+postman
+api testing
+mobile testing
+web testing
+performance testing
+security testing
+test plan
+test cases
+bug tracking
+juniper
+cisco
+red hat
+vmware
+citrix
+palo alto networks
+fortinet
+microsoft office
+word
+powerpoint
+outlook
+visio
+sharepoint
+microsoft teams
+google workspace
+gmail
+google docs
+google sheets
+google slides
+google drive
+google meet
+slack
+zoom
+trello
+asana
+monday.com
+smartsheet
+miro
+lucidchart
+autocad
+solidworks
+matlab
+labview
+simulink
+ansys
+catia
+nx
+revit
+arcgis
+qgis
+opencv
+nltk
+spacy
+gensim
+hugging face transformers
+docker compose
+helm
+ansible tower
+saltstack
+chef inspec
+terraform cloud
+vault
+consul
+nomad
+prometheus
+grafana
+alertmanager
+loki
+tempo
+jaeger
+zipkin
+fluentd
+logstash
+kibana
+grafana loki
+datadog
+new relic
+appdynamics
+dynatrace
+nagios
+zabbix
+icinga
+prtg
+solarwinds
+wireshark
+nmap
+metasploit
+burp suite
+owasp zap
+nessus
+qualys
+rapid7
+tenable
+crowdstrike
+sentinelone
+cisco umbrella
+okta
+auth0
+keycloak
+ping identity
+active directory
+ldap
+oauth
+jwt
+openid connect
+saml
+mfa
+sso
+pki
+tls/ssl
+vpn
+ids/ips
+dlp
+casb
+soar
+xdr
+edr
+mdr
+grc
+itil
+cobit
+prince2
+pmp
+csm
+cfa
+cpa
+shrm-cp
+phr
+ceh
+oscp
+ccna
+cissp
+cism
+comptia security+

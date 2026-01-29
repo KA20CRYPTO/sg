@@ -1,0 +1,58 @@
+Training Time: 8.49 seconds
+Accuracy: 0.9958854166666666
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+            AI Researcher     1.0000    1.0000    1.0000       400
+          Account Manager     1.0000    1.0000    1.0000       400
+               Accountant     1.0000    1.0000    1.0000       400
+             BI Developer     0.9852    0.9975    0.9913       400
+        Backend Developer     0.9921    0.9425    0.9667       400
+         Business Analyst     1.0000    1.0000    1.0000       400
+     Business Development     1.0000    1.0000    1.0000       400
+           Cloud Engineer     0.9950    0.9975    0.9963       400
+ Cloud Security Architect     1.0000    1.0000    1.0000       400
+       Compliance Officer     1.0000    1.0000    1.0000       400
+           Content Writer     1.0000    1.0000    1.0000       400
+         Customer Support     1.0000    1.0000    1.0000       400
+             Data Analyst     0.9975    0.9850    0.9912       400
+            Data Engineer     1.0000    1.0000    1.0000       400
+           Data Scientist     1.0000    1.0000    1.0000       400
+   Database Administrator     1.0000    1.0000    1.0000       400
+          DevOps Engineer     0.9975    0.9950    0.9962       400
+        Embedded Engineer     1.0000    1.0000    1.0000       400
+          Finance Analyst     1.0000    1.0000    1.0000       400
+       Frontend Developer     1.0000    0.9925    0.9962       400
+     Full Stack Developer     0.9803    0.9950    0.9876       400
+         Graphic Designer     1.0000    1.0000    1.0000       400
+               HR Manager     1.0000    1.0000    1.0000       400
+        Hardware Engineer     1.0000    1.0000    1.0000       400
+      Helpdesk Technician     1.0000    1.0000    1.0000       400
+    Localization Engineer     1.0000    1.0000    1.0000       400
+    Logistics Coordinator     1.0000    1.0000    1.0000       400
+              ML Engineer     1.0000    1.0000    1.0000       400
+        Marketing Manager     1.0000    1.0000    1.0000       400
+         Mobile Developer     1.0000    1.0000    1.0000       400
+         Network Engineer     1.0000    1.0000    1.0000       400
+       Operations Manager     1.0000    1.0000    1.0000       400
+         Product Designer     0.9132    1.0000    0.9547       400
+          Product Manager     1.0000    1.0000    1.0000       400
+          Project Manager     1.0000    1.0000    1.0000       400
+              QA Engineer     1.0000    1.0000    1.0000       400
+                  QA Lead     1.0000    1.0000    1.0000       400
+                Recruiter     1.0000    1.0000    1.0000       400
+         Research Analyst     1.0000    1.0000    1.0000       400
+          Sales Executive     1.0000    1.0000    1.0000       400
+        Security Engineer     1.0000    1.0000    1.0000       400
+Site Reliability Engineer     1.0000    1.0000    1.0000       400
+        Software Engineer     0.9614    0.9950    0.9779       400
+      Solutions Architect     1.0000    1.0000    1.0000       400
+         Systems Engineer     1.0000    1.0000    1.0000       400
+         Technical Writer     1.0000    1.0000    1.0000       400
+             UI Developer     0.9901    0.9975    0.9938       400
+              UX Designer     1.0000    0.9050    0.9501       400
+
+                 accuracy                         0.9959     19200
+                macro avg     0.9961    0.9959    0.9959     19200
+             weighted avg     0.9961    0.9959    0.9959     19200

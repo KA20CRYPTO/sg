@@ -1,0 +1,934 @@
+/* Base Imports & Global Resets */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Hide GitHub fork button, Streamlit menu and footer */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* Hide default sidebar navigation */
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
+
+/* Hide specific Streamlit internal elements */
+.st-emotion-cache-1wbqy5l.ekuhni80 {
+    display: none !important;
+}
+
+/* Global body and HTML styling */
+html,
+body,
+[class*="css"] {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    /* Slate-300 */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background 0.4s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+    /* Slate-400 */
+}
+
+/* Main content block container */
+.main .block-container {
+    padding: 3rem 4rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.1);
+    animation: fadeInScaleBounce 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    /* Glassmorphism */
+}
+
+html[data-theme="dark"] .main .block-container {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    background: rgba(30, 41, 59, 0.7);
+    /* Slate-800 with opacity */
+}
+
+@keyframes fadeInScaleBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Header (h1-h6) styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0f172a;
+    /* Slate-900 */
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 0.8em;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3 {
+    color: #f1f5f9;
+    /* Slate-100 */
+}
+
+/* Dashboard specific header */
+.dashboard-header {
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding-bottom: 1.5rem;
+    background: linear-gradient(90deg, #2563eb, #0ea5e9);
+    /* Blue to Sky gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Metric boxes styling */
+.stMetric {
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    /* Slate-200 */
+    background: white;
+}
+
+html[data-theme="dark"] .stMetric {
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    background: #1e293b;
+    /* Slate-800 */
+}
+
+.stMetric:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+    /* Blue-500 */
+}
+
+.stMetric>div[data-testid="stMetricValue"] {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2563eb;
+    /* Blue-600 */
+}
+
+.stMetric>div[data-testid="stMetricLabel"] {
+    font-size: 1rem;
+    color: #64748b;
+    /* Slate-500 */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Button styling */
+.stButton>button {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    /* Royal Blue Gradient */
+    color: white;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+}
+
+.stButton>button:hover {
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+.stButton>button:active {
+    transform: translateY(0);
+}
+
+/* Expander styling */
+.stExpander {
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: none;
+    background: white;
+}
+
+html[data-theme="dark"] .stExpander {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.stExpander>div[data-testid="stExpanderToggle"] {
+    color: #334155;
+    /* Slate-700 */
+    font-weight: 600;
+}
+
+.stExpander>div[data-testid="stExpanderToggle"] svg {
+    fill: #64748b;
+}
+
+.stExpander>div[data-testid="stExpanderToggle"][aria-expanded="true"] svg {
+    transform: rotate(90deg);
+}
+
+/* Form Elements Styling */
+
+/* Dropdown container styling */
+.dropdown-container {
+    background: #e6fafa;
+    /* Light blue background */
+    border: 1px solid #c8e6e6;
+    /* Soft border */
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 8px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Select box styling */
+select {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    color: #1a1a1a;
+    appearance: none;
+    /* Removes default arrow on some browsers */
+}
+
+/* Dropdown arrow */
+select::-ms-expand {
+    display: none;
+}
+
+.dropdown-container:focus-within {
+    box-shadow: 0 0 0 2px #b3ebeb;
+}
+
+/* Label text */
+.label-text {
+    font-weight: 600;
+    color: #2a2a2a;
+}
+
+
+
+html[data-theme="dark"] .stSelectbox>div>div>div[data-baseweb="select"]>div>span,
+html[data-theme="dark"] .stSelectbox>div>div>div[data-baseweb="select"]>div>div>span {
+    color: #f0f2f6 !important;
+    /* Explicitly set for dark mode to ensure visibility, with !important */
+}
+
+/* NEW: Styling for the dropdown options of selectbox */
+/* Target the actual text within the option items */
+div[data-baseweb="popover"] div[role="listbox"] div[role="option"]>div>span {
+    color: var(--text-color) !important;
+    /* Ensure options text is visible in light mode */
+}
+
+html[data-theme="dark"] div[data-baseweb="popover"] div[role="listbox"] div[role="option"]>div>span {
+    color: #f0f2f6 !important;
+    /* Ensure options text is visible in dark mode */
+}
+
+/* Background for the dropdown options and hover state */
+div[data-baseweb="popover"] div[role="listbox"] {
+    background-color: var(--background-color) !important;
+    /* Ensure the entire popover background matches theme */
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    /* Add a subtle border to the dropdown */
+    border-radius: 12px !important;
+    /* Rounded corners for the dropdown */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+    /* Add shadow to the dropdown */
+}
+
+html[data-theme="dark"] div[data-baseweb="popover"] div[role="listbox"] {
+    background-color: #3A3A3A !important;
+    /* Darker background for options in dark mode */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+div[data-baseweb="popover"] div[role="listbox"] div[role="option"] {
+    background-color: transparent !important;
+    /* Make individual option background transparent to allow listbox background to show */
+}
+
+div[data-baseweb="popover"] div[role="listbox"] div[role="option"]:hover {
+    background-color: rgba(0, 206, 201, 0.2) !important;
+    /* Teal hover effect */
+}
+
+html[data-theme="dark"] div[data-baseweb="popover"] div[role="listbox"] div[role="option"]:hover {
+    background-color: rgba(0, 206, 201, 0.3) !important;
+    /* Darker teal hover for dark mode */
+}
+
+
+/* Text input and Text area styling */
+.stTextInput>div>div>input,
+.stTextArea>div>div {
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 1.1rem 1.4rem;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+html[data-theme="dark"] .stTextInput>div>div>input,
+html[data-theme="dark"] .stTextArea>div>div {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.08);
+    background: #3A3A3A;
+}
+
+.stTextInput>div>div>input:focus,
+.stTextArea>div>div:focus-within {
+    border-color: #00cec9;
+    box-shadow: 0 0 0 5px rgba(0, 206, 201, 0.6);
+    outline: none;
+}
+
+.stTextInput>div>div>input:hover,
+.stTextArea>div>div:hover {
+    border-color: #00b0a8;
+}
+
+.stTextInput>label,
+.stTextArea>label {
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    display: block;
+    font-size: 1.1rem;
+}
+
+/* Radio button styling */
+/* Custom styling for st.sidebar.radio to make it look like buttons */
+.stSidebar .stRadio div[role="radiogroup"] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stSidebar .stRadio div[role="radiogroup"] label {
+    border-radius: 20px;
+    padding: 1.2rem 1.8rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+html[data-theme="dark"] .stSidebar .stRadio div[role="radiogroup"] label {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    background: #3A3A3A;
+}
+
+.stSidebar .stRadio div[role="radiogroup"] label span:first-child {
+    display: none;
+}
+
+.stSidebar .stRadio div[role="radiogroup"] label:hover {
+    background-color: rgba(0, 206, 201, 0.2);
+    transform: translateX(12px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Style for the selected radio button (using input:checked + div) */
+.stSidebar .stRadio div[role="radiogroup"] input:checked+div {
+    background-color: #00cec9;
+    color: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: translateX(0);
+    border: 1px solid #00a09a;
+    animation: sidebarSelectedPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes sidebarSelectedPop {
+    0% {
+        transform: scale(0.9);
+    }
+
+    70% {
+        transform: scale(1.03);
+        /* More overshoot */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* FIX: Explicit text color for unselected radio button labels in the sidebar */
+.stSidebar .stRadio div[role="radiogroup"] label p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color) !important;
+}
+
+html[data-theme="dark"] .stSidebar .stRadio div[role="radiogroup"] label p {
+    color: #f0f2f6 !important;
+}
+
+.stSidebar .stRadio div[role="radiogroup"] input:checked+div p {
+    color: white !important;
+}
+
+/* Custom styling for the dataframes */
+.stDataFrame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.5s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+html[data-theme="dark"] .stDataFrame {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #303030;
+}
+
+.stDataFrame:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.stDataFrame table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.stDataFrame th {
+    font-weight: 700;
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 5px solid #00cec9;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.stDataFrame tbody tr:nth-child(odd) {
+    /* Background will be set dynamically by Streamlit based on dark_mode toggle */
+}
+
+.stDataFrame tbody tr:nth-child(even) {
+    /* Background will be set dynamically by Streamlit based on dark_mode toggle */
+}
+
+.stDataFrame td {
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.stDataFrame tbody tr:hover {
+    background-color: rgba(0, 206, 201, 0.12) !important;
+}
+
+/* Dark mode specific table styling */
+html[data-theme="dark"] .stDataFrame table {
+    background-color: #303030;
+    color: #F5F5F5;
+}
+
+html[data-theme="dark"] .stDataFrame th {
+    background-color: #404040;
+    color: #00cec9;
+    border-bottom: 5px solid #00cec9;
+}
+
+html[data-theme="dark"] .stDataFrame tbody tr:nth-child(odd) {
+    background-color: #303030;
+}
+
+html[data-theme="dark"] .stDataFrame tbody tr:nth-child(even) {
+    background-color: #282828;
+}
+
+html[data-theme="dark"] .stDataFrame td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .stDataFrame tbody tr:hover {
+    background-color: rgba(0, 206, 201, 0.18) !important;
+}
+
+
+/* Info/Warning/Error/Success boxes */
+.stAlert {
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInSlideUp 0.8s ease-out;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+html[data-theme="dark"] .stAlert {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stAlert:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Specific alert types (Streamlit's internal classes are targeted) */
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn0 {
+    /* Info */
+    background-color: #E0F7FA;
+    color: #006064;
+    border-left: 8px solid #00BCD4;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn0 svg {
+    fill: #00BCD4;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn0 {
+    background-color: #2A3C4D;
+    color: #A7D9EB;
+    border-left: 8px solid #00B8D4;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn0 svg {
+    fill: #00B8D4;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn1 {
+    /* Success */
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    border-left: 8px solid #4CAF50;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn1 svg {
+    fill: #4CAF50;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn1 {
+    background-color: #2C472C;
+    color: #A8D5A8;
+    border-left: 8px solid #4CAF50;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn1 svg {
+    fill: #4CAF50;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn2 {
+    /* Warning */
+    background-color: #FFFDE7;
+    color: #FF8F00;
+    border-left: 8px solid #FFC107;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn2 svg {
+    fill: #FFC107;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn2 {
+    background-color: #4D422C;
+    color: #EBD9A7;
+    border-left: 8px solid #FFC107;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn2 svg {
+    fill: #FFC107;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn3 {
+    /* Error */
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border-left: 8px solid #F44336;
+}
+
+.stAlert.st-emotion-cache-1f0o48a.e1f1d6gn3 svg {
+    fill: #F44336;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn3 {
+    background-color: #4D2C2C;
+    color: #EBA7A7;
+    border-left: 8px solid #F44336;
+}
+
+html[data-theme="dark"] .stAlert.st-emotion-cache-1f0o48a.e1f1d6gn3 svg {
+    fill: #F44336;
+}
+
+/* Top Header Styles */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    /* Background, border, and shadow will be set dynamically by Streamlit based on dark_mode toggle */
+    margin-bottom: 4rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    animation: slideInDownFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.99), rgba(245, 247, 250, 0.9));
+}
+
+html[data-theme="dark"] .top-header {
+    background: linear-gradient(145deg, #282828, #202020);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.top-header h1 {
+    margin: 0;
+    color: #00cec9;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.top-header .profile {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+html[data-theme="dark"] .top-header .profile {
+    color: #F8F8F8;
+}
+
+.top-header .profile a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: 600;
+}
+
+html[data-theme="dark"] .top-header .profile a {
+    color: #f8fafd;
+}
+
+.top-header .profile a:hover {
+    color: #00b0a8;
+    text-decoration: underline;
+}
+
+/* Additional User-Friendly Enhancements & Animations */
+
+/* Card-like containers for general elements */
+.stCard {
+    border-radius: 25px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.5s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+html[data-theme="dark"] .stCard {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #303030;
+}
+
+.stCard:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Progress Bar Styling */
+.stProgress>div>div {
+    border-radius: 15px;
+    height: 16px;
+    background-color: rgba(0, 206, 201, 0.3);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.stProgress>div>div>div {
+    background-color: #00cec9;
+    border-radius: 15px;
+    transition: width 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.stProgress>div>div>div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-size: 1.2rem 1.2rem;
+    animation: progressStripe 1s linear infinite;
+    border-radius: 15px;
+}
+
+@keyframes progressStripe {
+    from {
+        background-position: 1.2rem 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+/* Checkbox and Radio Button Circles (visual enhancement) */
+.stCheckbox>label>div>span:first-child,
+.stRadio>label>div>span:first-child {
+    border-radius: 50%;
+    border: 3px solid #00cec9;
+    width: 1.4em;
+    height: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.stCheckbox>label>div>span:first-child svg,
+.stRadio>label>div>span:first-child svg {
+    fill: #00cec9;
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stCheckbox>label>div>input:checked+span:first-child,
+.stRadio>label>div>input:checked+span:first-child {
+    background-color: #00cec9;
+    border-color: #00cec9;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15), 0 0 0 5px rgba(0, 206, 201, 0.4);
+}
+
+.stCheckbox>label>div>input:checked+span:first-child svg,
+.stRadio>label>div>input:checked+span:first-child svg {
+    transform: scale(1);
+    fill: white;
+}
+
+html[data-theme="dark"] .stCheckbox>label>div>span:first-child,
+html[data-theme="dark"] .stRadio>label>div>span:first-child {
+    border-color: #00b0a8;
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+html[data-theme="dark"] .stCheckbox>label>div>span:first-child svg,
+html[data-theme="dark"] .stRadio>label>div>span:first-child svg {
+    fill: #fff;
+}
+
+html[data-theme="dark"] .stCheckbox>label>div>input:checked+span:first-child,
+html[data-theme="dark"] .stRadio>label>div>input:checked+span:first-child {
+    background-color: #00b0a8;
+    border-color: #00b0a8;
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.15), 0 0 0 5px rgba(0, 176, 168, 0.5);
+}
+
+/* Tooltip styling (for custom tooltips if added) */
+.stTooltip {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    border-radius: 12px;
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px);
+    backdrop-filter: blur(8px);
+}
+
+.stTooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Global text styling for readability */
+p {
+    line-height: 1.9;
+    margin-bottom: 1.5em;
+    font-size: 1.1rem;
+}
+
+/* Link styling */
+a {
+    color: #00cec9;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #00b0a8;
+    text-decoration: underline;
+}
+
+/* Utility Classes (can be added via st.markdown('<div class="my-class">...</div>', unsafe_allow_html=True)) */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.slide-up {
+    animation: fadeInSlideUp 0.9s ease-out forwards;
+}
+
+/* Responsive Design (Enhanced Breakpoints) */
+@media (max-width: 1024px) {
+
+    /* Tablet landscape */
+    .main .block-container {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .dashboard-header {
+        font-size: 2.8rem;
+    }
+
+    .stMetric>div[data-testid="stMetricValue"] {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Tablet portrait & large mobile */
+    .main .block-container {
+        padding: 1.5rem;
+    }
+
+    .dashboard-header {
+        font-size: 2.2rem;
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Form Elements Polishing */
+.stSelectbox>div>div,
+.stTextInput>div>div>input,
+.stTextArea>div>div {
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    /* Slate-300 */
+}
+
+.stSelectbox>div>div:focus-within,
+.stTextInput>div>div>input:focus,
+.stTextArea>div>div:focus-within {
+    border-color: #2563eb;
+    /* Blue-600 */
+    box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* Fix for Selectbox Dropdown Visibility (General) */
+div[data-baseweb="select"]>div {
+    background-color: white;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+html[data-theme="dark"] div[data-baseweb="select"]>div {
+    background-color: #1e293b;
+    color: white;
+    border-color: #334155;
+}
